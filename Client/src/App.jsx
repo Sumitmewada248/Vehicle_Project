@@ -3,8 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./Pages/Home"
 import About from "./Pages/About"
 import Login from "./Pages/Login"
-import AdminDashBoard from "./Admin/AddProduct"
+import AdminDashBoard from "./Admin/AdminDashBoard"
 import AddProduct from "./Admin/AddProduct"
+import CartData from "./Pages/addToCard"
+import CheckOut from "./Pages/CheckOut"
 
 
 const App=()=>{
@@ -17,6 +19,8 @@ const App=()=>{
         <Route path="/home" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/cart" element={<CartData/>}/>
+        <Route path ="/checkout" element={<CheckOut/>}/>
       
       
       </Route>
@@ -24,10 +28,11 @@ const App=()=>{
 
     <Routes>
            <Route path="admindashboard" element={<AdminDashBoard/>}>
+           
             <Route path="addproduct" element={<AddProduct/>}/>
            
-           
            </Route>
+           
         </Routes>
     </BrowserRouter>
     </>

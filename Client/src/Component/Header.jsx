@@ -28,6 +28,7 @@ const Header=()=>{
 
     const handleSubmit=async(e)=>{
      e.preventDefault();
+   
      
      try {
         let api=`${Base_URL}admin/adminlogin`;
@@ -35,8 +36,9 @@ const Header=()=>{
         console.log(response);
         messageApi.success(response.data.msg);
         setShow(false);
-        localStorage.setItem("admin", response.data.Admin.name);
         navigate("/admindashboard");
+        localStorage.setItem("adminname", response.data.Admin.name);
+     
      } catch (error) {
         messageApi.error(error.response.data.msg);
      }
@@ -54,8 +56,8 @@ const Header=()=>{
             <div id="topicons">
             <FaSearch />
          <FaHeart />
-         <FaUser />
-         <span> <FaShoppingCart /> {ProLength} </span>
+         <FaUser/>
+         <span> <FaShoppingCart onClick={()=>{navigate("/cart")}} /> {ProLength} </span>
          
 
          <RiAdminFill  onClick={handleShow} className='linkicon' />
