@@ -5,6 +5,8 @@ const mongoose=require("mongoose")
 const bodyparser = require("body-parser")
 const {config}=require("dotenv")
 const routes=require("./route/adminRoute")
+const customerRoute=require("./route/customerRoute")
+const paymentRoute=require("./route/Payment")
 const path=require("path")
 
 require("dotenv"),config()
@@ -21,6 +23,8 @@ app.use(cors())
 app.use("/uploads",express.static(path.join(__dirname,"uploads")))
 
 app.use("/admin",routes)
+app.use("/customer",customerRoute)
+app.use("/api/payment",paymentRoute)
 
 app.listen(port,()=>{
     console.log("server started")

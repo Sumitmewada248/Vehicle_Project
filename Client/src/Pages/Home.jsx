@@ -11,6 +11,28 @@ import Base_URL from '../config/BaseUrl';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 const Home=()=>{
+
+  const customerAunthenticate=async()=>{
+
+    const token=localStorage.getItem("token");
+     if (token)
+     {
+         let api=`${Base_URL}customer/userauthenticate`;
+
+         const response =await axios.get(api, {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+
+        console.log(response.data);
+        localStorage.setItem("username", response.data.name);
+        localStorage.setItem("useremail", response.data.email);
+        localStorage.setItem("userid", response.data._id);
+        setUname(localStorage.getItem("username"));
+        setUemail(localStorage.getItem("useremail"));
+     }
+   }
+
+
   const [mydata, setMydata]= useState([]);
   const dispatch= useDispatch();
 
@@ -28,6 +50,7 @@ const Home=()=>{
 
   useEffect(()=>{
     loadData();
+    customerAunthenticate();
   }, [])
 
 

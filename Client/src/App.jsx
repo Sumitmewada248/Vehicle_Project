@@ -8,6 +8,7 @@ import AddProduct from "./Admin/AddProduct"
 import CartData from "./Pages/addToCard"
 
 import CheckOut from "./Pages/CheckOut"
+import Registration from "./Pages/Register"
 
 
 const App=()=>{
@@ -22,7 +23,7 @@ const App=()=>{
         <Route path="/login" element={<Login/>}/>
         <Route path="/cart" element={<CartData/>}/>
         <Route path ="/checkout" element={<CheckOut/>}/>
-      
+      <Route path="/register" element={<Registration/>}/>
       
       </Route>
     </Routes>
