@@ -18,6 +18,7 @@ const AdminDashBoard = () => {
             <div>
                 <div id="sidebar">
                     <Link to="addproduct">Add Product</Link>
+                    <Link to="customerorder">Customer Order</Link>
                 </div>
                 <div id="outlet">
                     <Outlet />

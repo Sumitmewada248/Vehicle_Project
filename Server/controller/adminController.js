@@ -2,6 +2,7 @@
 
 const Admin = require('../model/adminModel');
 const Product = require('../model/ProductModel');
+const OrderModel=require("../model/OrderModel")
 const adminLogin = async (req, res) => {
   const { adminid, password } = req.body;
   if (adminid === "sumit" && password === "1234") {
@@ -43,8 +44,13 @@ const showProduct = async (req, res) => {
   res.status(200).json(product)
 }
 
+const CustomerOrder=async(req,res)=>{
+  
+  
+}
 module.exports = {
     adminLogin,
     addProduct,
-    showProduct
+    showProduct,
+    CustomerOrder
 }

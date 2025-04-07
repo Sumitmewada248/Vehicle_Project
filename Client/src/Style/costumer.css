@@ -88,3 +88,16 @@
     padding: 20px;
     border-radius: 10px;
 }
+#pay{
+    display: flex;
+    height: 45px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    background-color: #a675c3;
+    color: white;
+
+
+   
+}

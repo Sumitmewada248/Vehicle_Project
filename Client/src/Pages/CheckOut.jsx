@@ -85,7 +85,8 @@ const initPay = (data) => {
 const handlePay = async () => {
   try {
     const orderURL = `${Base_URL}api/payment/orders`;
-    const { data } = await axios.post(orderURL, { amount: totalAmount });
+    const { data } = await axios.post(orderURL, { amount: totalAmount ,
+      CustomerName:user.name,ProductName:Product[0].name, Address:user.address, Contact:user.contact,Email:user.email});  
     console.log(data);
     initPay(data.data);
   } catch (error) {
@@ -139,7 +140,7 @@ Total Payable Amount :{totalAmount}
 
 </div>
 
-<Button onClick={handlePay}>Pay Now</Button>
+<Button onClick={handlePay} id="pay">Pay Now</Button>
 
 
       

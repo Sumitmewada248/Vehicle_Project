@@ -5,6 +5,7 @@ import About from "./Pages/About"
 import Login from "./Pages/Login"
 import AdminDashBoard from "./Admin/AdminDashBoard"
 import AddProduct from "./Admin/AddProduct"
+import CustomerOrder from "./Admin/CustomerOrder"
 import CartData from "./Pages/addToCard"
 
 import CheckOut from "./Pages/CheckOut"
@@ -32,6 +33,7 @@ const App=()=>{
            <Route path="admindashboard" element={<AdminDashBoard/>}>
            
             <Route path="addproduct" element={<AddProduct/>}/>
+            <Route path="customerorder" element={<CustomerOrder/>}/> 
            
            </Route>
            

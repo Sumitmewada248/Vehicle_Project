@@ -8,5 +8,6 @@ const Admin = require("../controller/adminController");
 router.post("/adminlogin", Admin.adminLogin);
 router.post("/addproduct", uploads.upload.array("image",6), Admin.addProduct)
 router.get("/showproduct", Admin.showProduct)
+router.get("/customerorder",Admin.CustomerOrder)
 
 module.exports = router;
