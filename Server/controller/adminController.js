@@ -52,5 +52,6 @@ module.exports = {
     adminLogin,
     addProduct,
     showProduct,
+    
     CustomerOrder
 }

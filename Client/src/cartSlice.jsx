@@ -11,10 +11,12 @@ const cartSlice= createSlice({
             const cartData= state.cart.filter(key=>key.id==actions.payload.id);
             if (cartData.length>=1)
             {
+
                 message.error("Product already added to cart");
             }
             else 
             {
+                
                 state.cart.push(actions.payload);
             }
         },
