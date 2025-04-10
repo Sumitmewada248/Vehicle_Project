@@ -45,13 +45,13 @@ const showProduct = async (req, res) => {
 }
 
 const CustomerOrder=async(req,res)=>{
-  
+  const Order=await OrderModel.find()
+  res.status(200).json(Order)
   
 }
 module.exports = {
     adminLogin,
     addProduct,
     showProduct,
-    
     CustomerOrder
 }

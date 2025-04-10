@@ -1,4 +1,5 @@
 const CustomerModel= require('../model/customerModel');
+const ProductModel= require('../model/ProductModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -74,9 +75,24 @@ const GetUser = async (req, res) => {
         console.log(error);
     }
 }
+
+const searchProduct = async (req, res) => {
+    const { category } = req.body;
+    try {
+        const Product = await ProductModel.find({ category });
+        res.status(200).send(Product);
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
+
+
 module.exports = {
     registerCustomer,
     loginCustomer,
     userAuthenticate,
-    GetUser
+    GetUser,
+    searchProduct
 }

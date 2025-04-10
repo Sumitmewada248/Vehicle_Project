@@ -5,14 +5,17 @@ import { Table } from "react-bootstrap"
 
 const CustomerOrder = () => {
     const[mydata, setMydata]= useState([]);
-    useEffect(() => {
+
         const loadData=async()=>{
             let api=`${Base_Url}admin/customerorder`
             const response = await axios.get(api);
             setMydata(response.data);
         }
-        loadData();
-    }, [])
+
+        useEffect(()=>{
+            loadData();
+        },[])
+    
 
     return (
         <>
@@ -26,16 +29,18 @@ const CustomerOrder = () => {
                         <th>Address</th>
                         <th>Contact</th>
                         <th>Email</th>
+                        <th>Total Amount </th>
                     </tr>
                 </thead>
                 <tbody>
                     {mydata.map(data => (
-                        <tr key={data._id}>
+                        <tr>
                             <td>{data.CustomerName}</td>
                             <td>{data.ProductName}</td>
                             <td>{data.Address}</td>
                             <td>{data.Contact}</td>
                             <td>{data.Email}</td>
+                            <td>{data.amount}</td>
                         </tr>
                     ))}
                 </tbody>
@@ -46,3 +51,4 @@ const CustomerOrder = () => {
 }
 
 export default CustomerOrder
+

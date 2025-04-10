@@ -7,7 +7,7 @@ import AdminDashBoard from "./Admin/AdminDashBoard"
 import AddProduct from "./Admin/AddProduct"
 import CustomerOrder from "./Admin/CustomerOrder"
 import CartData from "./Pages/addToCard"
-
+import Search from "./Pages/Serarch"
 import CheckOut from "./Pages/CheckOut"
 import Registration from "./Pages/Register"
 
@@ -22,6 +22,7 @@ const App=()=>{
         <Route path="/home" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/search" element={<Search/>}/>
         <Route path="/cart" element={<CartData/>}/>
         <Route path ="/checkout" element={<CheckOut/>}/>
       <Route path="/register" element={<Registration/>}/>

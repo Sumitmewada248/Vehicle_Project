@@ -8,10 +8,6 @@ const persistConfig={
     storage
 }
 const persistedReducer= persistReducer(persistConfig, myReducer)
-
-
-
-
 const store= configureStore({
     reducer:{
        mycart:persistedReducer

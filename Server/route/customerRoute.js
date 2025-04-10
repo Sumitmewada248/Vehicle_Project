@@ -8,4 +8,5 @@ router.post('/register', Customer.registerCustomer);
 router.post('/login', Customer.loginCustomer);
 router.get('/userauthenticate',Customer.userAuthenticate);
 router.post('/getuser',Customer.GetUser);
+router.post("/searchproduct",Customer.searchProduct);
 module.exports = router;

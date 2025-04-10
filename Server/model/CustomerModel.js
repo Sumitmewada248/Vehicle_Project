@@ -9,4 +9,4 @@ const customerSchema = new mongoose.Schema({
     password:String
 })
 
-module.exports=mongoose.model("customer",customerSchema);
+module.exports=mongoose.model("customer",customerSchema,);
