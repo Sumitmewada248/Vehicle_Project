@@ -33,13 +33,14 @@ const CartData=()=>{
                 <FaMinusSquare  style={{fontSize:"25px", marginRight:"5px"}}
                  onClick={()=>{dispatch(qntyDecrease({id:key.id}))}}/>
                     {key.qnty}
-                  
+                
                     <FaPlusSquare style={{fontSize:"25px", marginLeft:"5px"}}  
                     onClick={()=>{dispatch(qntyIncrease({id:key.id}))}}/>
 
                 </td>
                 <td>{key.price * key.qnty}</td>
                 <td>
+                  
                     <a href="#" style={{fontSize:"25px"}}
                     onClick={()=>{dispatch(productRemove({id:key.id}))}}>
                     <MdDelete/>
