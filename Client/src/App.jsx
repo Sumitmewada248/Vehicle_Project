@@ -32,7 +32,7 @@ const App=()=>{
 
     <Routes>
            <Route path="admindashboard" element={<AdminDashBoard/>}>
-           
+           <Route index element={<CustomerOrder/>}/>
             <Route path="addproduct" element={<AddProduct/>}/>
             <Route path="customerorder" element={<CustomerOrder/>}/> 
            

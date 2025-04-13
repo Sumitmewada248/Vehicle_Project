@@ -10,6 +10,7 @@ import Logo from "../Images/logo.avif";
 import Form from 'react-bootstrap/Form';
 import Base_URL from '../config/BaseUrl';
 import axios from "axios";
+
 import { message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -54,7 +55,7 @@ const Header=()=>{
             </div>
             
             <div id="topicons">
-            <FaSearch />
+      
          <FaHeart />
          <FaUser/>
          <span> <FaShoppingCart onClick={()=>{navigate("/cart")}} /> {ProLength} </span>

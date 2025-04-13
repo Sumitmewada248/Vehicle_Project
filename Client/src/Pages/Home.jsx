@@ -1,7 +1,3 @@
-import Carousel from 'react-bootstrap/Carousel';
-import img1 from "../Images/1c.jpg";
-import img2 from "../Images/b.webp";
-import img3 from "../Images/3p.jpg";
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -62,7 +58,7 @@ const Home=()=>{
          <Card style={{ width:"500px",border:"none"}}>
       <Card.Img variant="top" src={`${Base_URL}${key.defaultimage}`} height="300"  />
       <Card.Body>
-        <Card.Title>Car: {key.name}</Card.Title>
+        <Card.Title>Vechile: {key.name}</Card.Title>
         <Card.Text>
            <h5>About :{key.description}</h5>
            <h4>Brand : {key.brand}</h4>
