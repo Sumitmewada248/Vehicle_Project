@@ -37,7 +37,9 @@ const Search = () => {
                                 <h4>Brand: {key.brand}</h4>
                                 <h4>Type: {key.category}</h4>
                                 <h2>Price: {key.price}</h2>
+
                             </Card.Text>
+                            
                             <Button variant="primary"
                                 onClick={() => { 
                                     dispatch(addtoCart({ 
