@@ -7,6 +7,7 @@ const customerSchema = new mongoose.Schema({
     contact:String,
     email:String,
     password:String
+    
 })
 
 module.exports=mongoose.model("customer",customerSchema,);
