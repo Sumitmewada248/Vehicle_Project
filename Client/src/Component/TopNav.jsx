@@ -11,8 +11,10 @@ const TopNav=()=>{
         <div id="mynav">
          <Navbar bg="dark" data-bs-theme="dark">
         <Container>
+
           <Navbar.Brand href="#">Navbar</Navbar.Brand>
           <Nav className="me-auto">
+            
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/search">  <FaSearch /> Search</Nav.Link>
