@@ -32,6 +32,7 @@ const Login = () => {
 Enter Your Email :<input type="text" name="email" onChange={(e)=>{setEmail(e.target.value)}} /><br />
             Enter Your Password :<input type="password" name="password" onChange={(e)=>{setPassword(e.target.value)}} /><br />
             <button onClick={handelSubmit}>Login</button>
+            
             <p>Don't have an account? <a href="/register" onClick={()=>{navigate("/register")}}>Register here</a></p>
             </div> 
         </>
