@@ -10,6 +10,7 @@ import Button from "react-bootstrap/esm/Button";
 import { useNavigate } from "react-router-dom";
 
 const CartData=()=>{
+  
     const Product= useSelector(state=>state.mycart.cart);
     console.log(Product);
     const navigate = useNavigate();
